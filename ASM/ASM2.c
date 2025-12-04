@@ -47,7 +47,27 @@ int main() {
             }
 
             break;
-            case 2: printf("2. Chuong trinh tim UCLN va BCNN\n"); 
+            case 2:{
+                int x, y;
+                printf("\n--- Chuong trinh tim UCLN va BCNN ---\n");
+                printf("Nhap so x: ");
+                scanf("%d", &x);
+                printf("Nhap so y: ");
+                scanf("%d", &y);
+                int a = x, b = y;
+                while (a != b) {
+                    if (a > b)
+                        a = a - b;
+                    else
+                        b = b - a;
+                }
+                int ucln = a; 
+                int bcnn = (x * y) / ucln;
+
+                printf("Uoc chung lon nhat (UCLN) cua %d va %d: %d\n", x, y, ucln);
+                printf("Boi chung nho nhat (BCNN) cua %d va %d: %d\n", x, y, bcnn);
+            }
+   
             break;
             case 3: printf("3. Chuong trinh tinh tien karaoke\n"); 
             break;
